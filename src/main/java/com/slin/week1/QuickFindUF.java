@@ -1,7 +1,7 @@
 package com.slin.week1;
 
 /**
- * Union-Find
+ * Union-Find with path compression
  */
 public class QuickFindUF
 {

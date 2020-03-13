@@ -1,0 +1,9 @@
+digraph G {
+0 [label="lib1"]
+1 [label="lib2"]
+2 [label="lib3"]
+3 [label="CommonLib"]
+1 -> 2;
+1 -> 3;
+0 -> 3;
+}

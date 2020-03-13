@@ -3,19 +3,19 @@ package com.slin.week6;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SymbolGraph
+public class SymbolDigraph
 {
-    protected Graph G;
+    protected Digraph G;
     protected Map<String, Integer> nameToIdx;
     protected String[] idxToName;
     protected int count;
 
-    public SymbolGraph()
+    public SymbolDigraph()
     {
        this.init(0);
     }
 
-    public SymbolGraph(String filename, String delim)
+    public SymbolDigraph(String filename, String delim)
     {
         this.init(0);
     }
@@ -34,7 +34,7 @@ public class SymbolGraph
         return this.idxToName[v];
     }
 
-    public Graph G()
+    public Digraph G()
     {
         return this.G;
     }
@@ -44,7 +44,7 @@ public class SymbolGraph
         this.count = 0;
         this.nameToIdx = new HashMap<>();
         this.idxToName = new String[v];
-        this.G = new Graph(v);
+        this.G = new Digraph(v);
     }
 
     public static void main(String[] args) {

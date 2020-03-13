@@ -1,0 +1,8 @@
+digraph G {
+0 [label="lib1"]
+1 [label="lib2"]
+2 [label="lib3"]
+1 -> 0;
+1 -> 2;
+2 -> 1;
+}

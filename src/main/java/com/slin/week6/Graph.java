@@ -20,6 +20,15 @@ public class Graph
             this.adj[v] = new Bag<Integer>();
         }
     }
+
+    public void reset()
+    {
+        this.adj = (Bag<Integer>[])new Bag[V];
+        for (int v=0; v<this.V; v++)
+        {
+            this.adj[v] = new Bag<Integer>();
+        }
+    }
     
     public int V()
     {

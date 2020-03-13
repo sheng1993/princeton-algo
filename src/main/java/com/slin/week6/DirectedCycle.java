@@ -29,7 +29,7 @@ public class DirectedCycle
         this.marked[v] = true;
         for (int w : G.adj(v))
         {
-            if(this.hasCyble()) return;
+            if(this.hasCycle()) return;
             else if (!this.marked[w])
             {
                 this.edgeTo[w] = v;
@@ -49,7 +49,7 @@ public class DirectedCycle
         this.onStack[v] = false;
     }
 
-    public boolean hasCyble()
+    public boolean hasCycle()
     {
         return this.cycle != null;
     }
@@ -57,5 +57,9 @@ public class DirectedCycle
     public Iterable<Integer> cycle()
     {
         return this.cycle;
+    }
+
+    public static void main(String[] args) {
+        
     }
 }

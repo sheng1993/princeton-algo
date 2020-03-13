@@ -7,7 +7,6 @@ public class PercolationStats
 {
     private int n;
     private int trials;
-    private StdRandom rdm;
     private double[] thresholds;
 
     // perform independent trials on an n-by-n grid

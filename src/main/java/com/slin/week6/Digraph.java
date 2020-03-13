@@ -2,6 +2,7 @@ package com.slin.week6;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
@@ -9,15 +10,41 @@ import edu.princeton.cs.algs4.In;
 
 public class Digraph extends Graph
 {
+    private HashSet<Integer>[] edges; 
+
     public Digraph(int V)
     {
         super(V);
+        this.edges = new HashSet[V];
+
+        for (int i=0;i<V;i++)
+        {
+            this.edges[i] = new HashSet<>();
+        }
+    }
+
+    public boolean hasEdge(int v, int w)
+    {
+        return this.edges[v].contains(w);
+    }
+
+    @Override
+    public void reset() 
+    {
+        super.reset();
+        this.edges = new HashSet[V];
+
+        for (int i=0;i<V;i++)
+        {
+            this.edges[i] = new HashSet<>();
+        }
     }
     
     @Override
     public void addEdge(int v, int w)
     {
         this.adj[v].add(w);
+        this.edges[v].add(w);
         this.E++;
     }
 
